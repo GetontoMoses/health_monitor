@@ -1,5 +1,4 @@
 import requests
-import time
 
 def check_url(url):
     try:
@@ -13,12 +12,15 @@ def check_url(url):
         print(f"{url} is Down")
         
     
-    def monitor():
-        with open("urls.txt") as f:
-            urls = f.read().splitlines()
-        
-        for url in urls:
-            check_url(url)
+def monitor():
+    with open("urls.txt") as f:
+        urls = f.read().splitlines()
     
-    if __name__ == "__main__":
-        monitor
+    for url in urls:
+        check_url(url)
+    
+
+    
+if __name__ == "__main__":
+    monitor()
+     
