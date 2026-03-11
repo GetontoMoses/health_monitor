@@ -19,7 +19,6 @@ def monitor():
     for url in urls:
         check_url(url)
     
-
     
 if __name__ == "__main__":
     monitor()
